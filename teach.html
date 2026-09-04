@@ -1,0 +1,2023 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Teacher's Day ❤️ | Pranesh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(168,85,247,.12),transparent 30%),
+    radial-gradient(circle at 80% 10%,rgba(236,72,153,.12),transparent 30%),
+    #090613;
+  color:#fff;
+  overflow-x:hidden;
+  line-height:1.7;
+}
+
+/* =========================
+   NAME SCREEN
+========================= */
+
+#nameScreen{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:25px;
+  background:
+    radial-gradient(circle at 50% 30%,rgba(236,72,153,.16),transparent 35%),
+    radial-gradient(circle at 20% 80%,rgba(139,92,246,.15),transparent 35%),
+    #090613;
+  transition:.8s;
+}
+
+#nameScreen.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.name-card{
+  width:100%;
+  max-width:520px;
+  padding:45px 30px;
+  text-align:center;
+  border-radius:32px;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.025)
+  );
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 30px 100px rgba(0,0,0,.5);
+  backdrop-filter:blur(20px);
+  animation:nameCardIn .9s ease forwards;
+}
+
+@keyframes nameCardIn{
+  from{
+    opacity:0;
+    transform:translateY(40px) scale(.94);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.name-cap{
+  width:95px;
+  height:95px;
+  margin:0 auto 25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:3rem;
+  background:radial-gradient(
+    circle at 30% 30%,
+    #f9a8d4,
+    #a855f7 50%,
+    #4c1d95
+  );
+  box-shadow:
+    0 0 30px rgba(168,85,247,.45),
+    0 0 80px rgba(236,72,153,.2);
+  animation:nameFloat 3s ease-in-out infinite;
+}
+
+@keyframes nameFloat{
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+}
+
+.small-title{
+  color:#f9a8d4;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.name-card h1{
+  font-size:clamp(2rem,7vw,3.4rem);
+  line-height:1.1;
+  background:linear-gradient(
+    90deg,
+    #fff,
+    #f9a8d4,
+    #c084fc,
+    #fff
+  );
+  background-size:250% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 5s linear infinite;
+}
+
+.name-card p{
+  margin:18px auto 25px;
+  max-width:420px;
+  color:#a99bb8;
+  font-size:.95rem;
+}
+
+.name-input{
+  width:100%;
+  padding:16px 20px;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,.12);
+  outline:none;
+  background:rgba(255,255,255,.05);
+  color:#fff;
+  font-family:inherit;
+  font-size:1rem;
+  text-align:center;
+}
+
+.name-input::placeholder{
+  color:#8f839d;
+}
+
+.name-input:focus{
+  border-color:rgba(244,114,182,.6);
+  box-shadow:0 0 0 4px rgba(236,72,153,.08);
+}
+
+.open-btn{
+  width:100%;
+  margin-top:15px;
+  padding:16px 24px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  color:#fff;
+  font-family:inherit;
+  font-size:1rem;
+  font-weight:900;
+  background:linear-gradient(135deg,#ec4899,#8b5cf6);
+  box-shadow:0 10px 35px rgba(236,72,153,.22);
+  transition:.3s;
+}
+
+.open-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 45px rgba(236,72,153,.35);
+}
+
+.name-error{
+  min-height:22px;
+  margin-top:10px;
+  color:#f9a8d4;
+  font-size:.8rem;
+}
+
+.creator-note{
+  margin-top:25px;
+  color:#6f647c;
+  font-size:.75rem;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:5000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 7%;
+  background:rgba(9,6,19,.75);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.logo{
+  font-size:1.2rem;
+  font-weight:900;
+  background:linear-gradient(
+    90deg,
+    #f9a8d4,
+    #c084fc,
+    #f472b6
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.nav-right{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.nav-btn{
+  color:#fff;
+  text-decoration:none;
+  padding:9px 18px;
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  font-size:.85rem;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:120px 20px 80px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-content{
+  max-width:900px;
+  position:relative;
+  z-index:10;
+}
+
+.orb{
+  width:130px;
+  height:130px;
+  margin:0 auto 35px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:4rem;
+  background:radial-gradient(
+    circle at 30% 30%,
+    #f9a8d4,
+    #a855f7 45%,
+    #4c1d95
+  );
+  box-shadow:
+    0 0 30px rgba(168,85,247,.45),
+    0 0 80px rgba(236,72,153,.2);
+  animation:floatOrb 4s ease-in-out infinite;
+}
+
+@keyframes floatOrb{
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-14px);
+  }
+}
+
+.eyebrow{
+  color:#f9a8d4;
+  font-size:.85rem;
+  font-weight:800;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(3rem,8vw,6.5rem);
+  line-height:1;
+  letter-spacing:-5px;
+  background:linear-gradient(
+    90deg,
+    #fff,
+    #f9a8d4,
+    #c084fc,
+    #fff
+  );
+  background-size:250% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove{
+  to{
+    background-position:250% center;
+  }
+}
+
+.hero p{
+  max-width:700px;
+  margin:30px auto 0;
+  color:#c4b5d8;
+  font-size:1.1rem;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:35px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:50px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn-primary{
+  color:#fff;
+  background:linear-gradient(135deg,#ec4899,#8b5cf6);
+}
+
+.btn-secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+}
+
+/* =========================
+   FALLING EMOJIS
+========================= */
+
+.love-rain{
+  position:fixed;
+  top:-80px;
+  pointer-events:none;
+  user-select:none;
+  z-index:800;
+  opacity:0;
+  will-change:transform,opacity;
+  animation:fallDown linear forwards;
+  filter:drop-shadow(
+    0 0 5px rgba(244,114,182,.4)
+  );
+}
+
+@keyframes fallDown{
+
+  0%{
+    transform:
+      translateY(-80px)
+      translateX(0)
+      rotate(0);
+    opacity:0;
+  }
+
+  10%{
+    opacity:.95;
+  }
+
+  30%{
+    transform:
+      translateY(30vh)
+      translateX(25px)
+      rotate(100deg);
+  }
+
+  60%{
+    transform:
+      translateY(60vh)
+      translateX(-25px)
+      rotate(220deg);
+  }
+
+  100%{
+    transform:
+      translateY(115vh)
+      translateX(20px)
+      rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  padding:110px 7%;
+}
+
+.section-title{
+  max-width:750px;
+  text-align:center;
+  margin:0 auto 60px;
+}
+
+.section-title span{
+  color:#f472b6;
+  font-size:.8rem;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.section-title h2{
+  font-size:clamp(2.2rem,5vw,4rem);
+  line-height:1.1;
+  margin-top:15px;
+}
+
+.section-title p{
+  color:#a99bb8;
+  margin-top:20px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  padding:35px;
+  border-radius:25px;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.025)
+  );
+  border:1px solid rgba(255,255,255,.07);
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card-icon{
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+.card h3{
+  font-size:1.3rem;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#a99bb8;
+  font-size:.95rem;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.heart-section{
+  max-width:1000px;
+  margin:auto;
+}
+
+.heart-box{
+  padding:65px;
+  border-radius:35px;
+  background:linear-gradient(
+    135deg,
+    rgba(236,72,153,.09),
+    rgba(139,92,246,.08)
+  );
+  border:1px solid rgba(244,114,182,.15);
+  box-shadow:0 30px 100px rgba(0,0,0,.25);
+  text-align:center;
+}
+
+.heart-box h2{
+  font-size:clamp(2rem,5vw,3.5rem);
+  margin-bottom:30px;
+}
+
+.heart-box p{
+  max-width:760px;
+  margin:0 auto 20px;
+  color:#c4b5d8;
+  font-size:1.05rem;
+}
+
+.teacher-name{
+  color:#f9a8d4 !important;
+  font-size:1.3rem !important;
+  font-weight:900;
+}
+
+.highlight{
+  max-width:650px;
+  margin:35px auto;
+  display:grid;
+  gap:13px;
+}
+
+.highlight div{
+  padding:15px 20px;
+  border-radius:15px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.05);
+  color:#f9a8d4;
+  font-weight:700;
+}
+
+/* =========================
+   TEACHERS
+========================= */
+
+.teachers{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.teacher{
+  padding:40px 30px;
+  text-align:center;
+  border-radius:25px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.07);
+  transition:.3s;
+}
+
+.teacher:hover{
+  transform:translateY(-8px);
+}
+
+.teacher-avatar{
+  width:80px;
+  height:80px;
+  margin:0 auto 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:2.2rem;
+  background:linear-gradient(
+    135deg,
+    #ec4899,
+    #8b5cf6
+  );
+}
+
+.teacher p{
+  color:#a99bb8;
+  font-size:.9rem;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+  max-width:800px;
+  margin:auto;
+  position:relative;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:20px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(
+    #ec4899,
+    #8b5cf6,
+    transparent
+  );
+}
+
+.timeline-item{
+  position:relative;
+  padding-left:65px;
+  margin-bottom:45px;
+}
+
+.timeline-dot{
+  position:absolute;
+  left:10px;
+  top:5px;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:linear-gradient(
+    135deg,
+    #ec4899,
+    #8b5cf6
+  );
+}
+
+.timeline-item p{
+  color:#a99bb8;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section{
+  max-width:1000px;
+  margin:80px auto;
+  text-align:center;
+  padding:80px 35px;
+  border-radius:40px;
+  background:radial-gradient(
+    circle at center,
+    rgba(236,72,153,.12),
+    rgba(139,92,246,.05),
+    transparent 70%
+  );
+  border:1px solid rgba(255,255,255,.07);
+}
+
+.flowers{
+  font-size:2.5rem;
+  margin-bottom:25px;
+}
+
+.final-section h2{
+  font-size:clamp(2.3rem,6vw,4.5rem);
+  line-height:1.1;
+}
+
+.final-section p{
+  max-width:720px;
+  margin:25px auto 0;
+  color:#a99bb8;
+}
+
+.signature{
+  margin-top:45px;
+  padding-top:30px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.signature-love{
+  color:#f9a8d4 !important;
+  font-size:1.35rem !important;
+  font-weight:800;
+}
+
+.signature-name{
+  color:#fff !important;
+  font-size:1.2rem !important;
+  font-weight:900;
+}
+
+.signature-role{
+  color:#c4b5d8 !important;
+  font-size:.95rem !important;
+}
+
+.signature-company{
+  color:#f472b6;
+  font-weight:900;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  text-align:center;
+  padding:45px 20px 55px;
+  color:#8f839d;
+  font-size:.9rem;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
+footer strong{
+  color:#f9a8d4;
+}
+
+.footer-company{
+  color:#f472b6;
+  font-weight:800;
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:.8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================
+   CLICK HEART
+========================= */
+
+.floating-heart{
+  position:fixed;
+  pointer-events:none;
+  z-index:9999;
+  font-size:24px;
+  animation:heartFloat 2.2s ease-out forwards;
+}
+
+@keyframes heartFloat{
+
+  0%{
+    transform:
+      translateY(0)
+      scale(.8);
+    opacity:1;
+  }
+
+  100%{
+    transform:
+      translateY(-160px)
+      scale(1.5);
+    opacity:0;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+  .cards,
+  .teachers{
+    grid-template-columns:1fr;
+  }
+
+  .heart-box{
+    padding:40px 25px;
+  }
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  nav{
+    padding:16px 5%;
+  }
+
+  section{
+    padding:80px 5%;
+  }
+
+  .orb{
+    width:105px;
+    height:105px;
+    font-size:3rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+
+  .final-section{
+    padding:60px 20px;
+    margin:50px 5%;
+  }
+
+  .love-rain{
+    font-size:16px;
+  }
+
+  .name-card{
+    padding:35px 22px;
+  }
+
+  .nav-right .nav-btn:first-child{
+    display:none;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAME ENTRY SCREEN
+========================= -->
+
+<div id="nameScreen">
+
+  <div class="name-card">
+
+    <div class="name-cap">
+      🎓
+    </div>
+
+    <div class="small-title">
+      A Special Teacher's Day Tribute
+    </div>
+
+    <h1>
+      Before We Begin... ❤️
+    </h1>
+
+    <p>
+      May I know the name of the wonderful teacher
+      this little tribute is made for? 🌷
+    </p>
+
+    <input
+      id="teacherNameInput"
+      class="name-input"
+      type="text"
+      placeholder="Enter your teacher's name"
+      maxlength="40"
+      autocomplete="off"
+    >
+
+    <div
+      id="nameError"
+      class="name-error"
+    ></div>
+
+    <button
+      id="openLetterBtn"
+      class="open-btn"
+      type="button"
+    >
+      Open My Teacher's Day Letter 💌
+    </button>
+
+    <div class="creator-note">
+      Crafted with ❤️ by Pranesh
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     NAV
+========================= -->
+
+<nav>
+
+  <div class="logo">
+    TeacherDay 🎓
+  </div>
+
+  <div class="nav-right">
+
+    <button
+      id="changeNameBtn"
+      class="nav-btn"
+      type="button"
+    >
+      Change Name
+    </button>
+
+    <a
+      href="#message"
+      class="nav-btn"
+    >
+      Tribute ❤️
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="orb">
+      🎓
+    </div>
+
+    <div class="eyebrow">
+      A Tribute From The Heart
+    </div>
+
+    <h1>
+      Happy<br>
+      Teacher's Day
+    </h1>
+
+    <p>
+      To
+      <strong
+        id="heroTeacherName"
+        style="color:#f9a8d4;"
+      >
+        An Amazing Teacher
+      </strong>
+      — someone who teaches us more than lessons;
+      who teaches us courage, kindness, patience,
+      confidence and the beautiful art of believing
+      in ourselves. ❤️
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="#message"
+        class="btn btn-primary"
+      >
+        Read My Message 💌
+      </a>
+
+      <a
+        href="#teachers"
+        class="btn btn-secondary"
+      >
+        For Every Teacher 🌷
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MORE THAN TEACHER
+========================= -->
+
+<section id="teachers">
+
+  <div class="section-title reveal">
+
+    <span>
+      More Than A Teacher
+    </span>
+
+    <h2>
+      You Give Us More Than Knowledge.
+    </h2>
+
+    <p>
+      Some lessons stay in notebooks.
+      The lessons you give us stay in our hearts.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card reveal">
+
+      <div class="card-icon">
+        💡
+      </div>
+
+      <h3>
+        You Inspire
+      </h3>
+
+      <p>
+        You make us see possibilities where
+        we once saw limitations. Your belief
+        in us often becomes the reason we
+        start believing in ourselves.
+      </p>
+
+    </div>
+
+
+    <div class="card reveal">
+
+      <div class="card-icon">
+        🌱
+      </div>
+
+      <h3>
+        You Help Us Grow
+      </h3>
+
+      <p>
+        Every correction, every challenge and
+        every word of encouragement helps us
+        become a little stronger and better
+        than yesterday.
+      </p>
+
+    </div>
+
+
+    <div class="card reveal">
+
+      <div class="card-icon">
+        🧭
+      </div>
+
+      <h3>
+        You Guide Us
+      </h3>
+
+      <p>
+        When we feel lost, your advice gives
+        us direction. Sometimes a teacher's
+        simple words can change the path
+        of an entire life.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section id="message">
+
+  <div class="heart-section">
+
+    <div class="heart-box reveal">
+
+      <div
+        style="
+          font-size:3rem;
+          margin-bottom:15px;
+        "
+      >
+        💖
+      </div>
+
+      <h2>
+        A Little Thank You<br>
+        From My Heart
+      </h2>
+
+      <p class="teacher-name">
+        Dear
+        <span id="messageTeacherName">
+          Amazing Teacher
+        </span>,
+        🌷
+      </p>
+
+      <p>
+        There are some people who enter our lives
+        and leave behind something much bigger than
+        memories. Teachers are those beautiful people.
+      </p>
+
+      <p>
+        You may think you are simply teaching a lesson,
+        checking an assignment, correcting a mistake,
+        or explaining something one more time.
+        But for a student, those little moments can
+        become memories that last forever.
+      </p>
+
+      <p>
+        Thank you for believing in students even when
+        they don't believe in themselves.
+        Thank you for your patience when we make mistakes.
+        Thank you for your kindness when we are struggling.
+        And thank you for giving us another chance
+        when we need one.
+      </p>
+
+      <div class="highlight">
+
+        <div>
+          You taught us that failure is not the end. ❤️
+        </div>
+
+        <div>
+          You taught us to keep trying. 🌱
+        </div>
+
+        <div>
+          You taught us to believe in ourselves. ✨
+        </div>
+
+        <div>
+          You taught us that kindness can change
+          someone's entire day. 🌷
+        </div>
+
+      </div>
+
+      <p>
+        The world may remember famous people for what
+        they achieved, but behind many successful people
+        are teachers who once believed in them.
+      </p>
+
+      <p>
+        Your impact may never fit inside a classroom.
+        It travels with your students into their careers,
+        families, dreams and futures.
+      </p>
+
+      <p>
+        And for that, we will always be grateful. ❤️
+      </p>
+
+      <div style="margin-top:35px;">
+
+        <div
+          style="
+            color:#f9a8d4;
+            font-size:1.3rem;
+            font-weight:800;
+          "
+        >
+          With endless gratitude & love ❤️
+        </div>
+
+        <div
+          style="
+            margin-top:8px;
+            font-size:1.15rem;
+            font-weight:900;
+          "
+        >
+          — Pranesh 🎓
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TEACHERS
+========================= -->
+
+<section>
+
+  <div class="section-title reveal">
+
+    <span>
+      The People Who Inspire Us
+    </span>
+
+    <h2>
+      Every Teacher Is A Quiet Hero.
+    </h2>
+
+    <p>
+      They don't always wear capes.
+      Sometimes they carry books, chalk,
+      laptops and an endless amount of patience.
+    </p>
+
+  </div>
+
+
+  <div class="teachers">
+
+    <div class="teacher reveal">
+
+      <div class="teacher-avatar">
+        📚
+      </div>
+
+      <h3>
+        The Knowledge Giver
+      </h3>
+
+      <p>
+        Turning difficult subjects into
+        meaningful lessons.
+      </p>
+
+    </div>
+
+
+    <div class="teacher reveal">
+
+      <div class="teacher-avatar">
+        ❤️
+      </div>
+
+      <h3>
+        The Believer
+      </h3>
+
+      <p>
+        Seeing potential in students
+        before they see it themselves.
+      </p>
+
+    </div>
+
+
+    <div class="teacher reveal">
+
+      <div class="teacher-avatar">
+        🌟
+      </div>
+
+      <h3>
+        The Inspiration
+      </h3>
+
+      <p>
+        Leaving behind confidence,
+        courage and unforgettable memories.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section>
+
+  <div class="section-title reveal">
+
+    <span>
+      What Teachers Give Us
+    </span>
+
+    <h2>
+      More Than We Can Ever Say.
+    </h2>
+
+  </div>
+
+
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-dot"></div>
+
+      <h3>
+        📖 Knowledge
+      </h3>
+
+      <p>
+        You open the doors to knowledge
+        and help us understand the world
+        around us.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-dot"></div>
+
+      <h3>
+        🌱 Confidence
+      </h3>
+
+      <p>
+        You remind us that mistakes are not
+        something to fear — they are part
+        of learning.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-dot"></div>
+
+      <h3>
+        🧭 Direction
+      </h3>
+
+      <p>
+        Your advice helps us make decisions
+        when the road ahead feels uncertain.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-dot"></div>
+
+      <h3>
+        ❤️ Memories
+      </h3>
+
+      <p>
+        Long after we leave the classroom,
+        we remember the teachers who made
+        us feel seen and valued.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final-section">
+
+  <div class="flowers">
+    🌸 🎓 🌸
+  </div>
+
+  <h2>
+
+    To
+    <span
+      id="finalTeacherName"
+      style="color:#f9a8d4;"
+    >
+      Every Teacher
+    </span>
+
+    <br>
+
+    Who Touched A Heart ❤️
+
+  </h2>
+
+  <p>
+    Your lessons may have started inside a classroom,
+    but their impact continues far beyond it.
+    You have helped shape dreams, build confidence
+    and create futures that you may never even get
+    to see.
+  </p>
+
+  <p>
+    So here's to every teacher who stayed patient,
+    every teacher who cared, every teacher who inspired,
+    and every teacher who believed.
+  </p>
+
+  <p
+    style="
+      color:#f9a8d4;
+      font-weight:700;
+    "
+  >
+    Thank you for being one of the most beautiful parts
+    of our journey. ❤️
+  </p>
+
+  <p
+    style="
+      font-size:1.5rem;
+      color:#fff;
+      font-weight:800;
+    "
+  >
+    Happy Teacher's Day! 💐
+  </p>
+
+
+  <div class="signature">
+
+    <p class="signature-love">
+      With Love & Gratitude ❤️
+    </p>
+
+    <p class="signature-name">
+      Pranesh
+    </p>
+
+    <p class="signature-role">
+
+      Full Stack Developer & Founder<br>
+
+      <span class="signature-company">
+        Vibe Verse Tech
+      </span>
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  Crafted with ❤️ by
+  <strong>Pranesh</strong>
+
+  <br>
+
+  Full Stack Developer & Founder of
+  <span class="footer-company">
+    Vibe Verse Tech
+  </span>
+
+  <br><br>
+
+  🎓 Happy Teacher's Day 🎓
+
+</footer>
+
+
+<script>
+
+/* =================================
+   NAME SYSTEM
+================================= */
+
+const nameScreen =
+  document.getElementById("nameScreen");
+
+const teacherNameInput =
+  document.getElementById("teacherNameInput");
+
+const openLetterBtn =
+  document.getElementById("openLetterBtn");
+
+const changeNameBtn =
+  document.getElementById("changeNameBtn");
+
+const nameError =
+  document.getElementById("nameError");
+
+const heroTeacherName =
+  document.getElementById("heroTeacherName");
+
+const messageTeacherName =
+  document.getElementById("messageTeacherName");
+
+const finalTeacherName =
+  document.getElementById("finalTeacherName");
+
+
+/* Clean entered name */
+
+function cleanName(name){
+
+  return name
+    .trim()
+    .replace(/\s+/g," ")
+    .slice(0,40);
+
+}
+
+
+/* Add Ma'am automatically */
+
+function makeTeacherName(name){
+
+  const clean =
+    cleanName(name);
+
+  if(!clean){
+    return "";
+  }
+
+  /*
+    Removes Ma'am / Mam if user
+    already entered it.
+  */
+
+  const withoutTitle =
+    clean.replace(
+      /\s+(ma'?am|mam)$/i,
+      ""
+    );
+
+  return withoutTitle + " Ma'am";
+
+}
+
+
+/* Update complete website */
+
+function updateName(name){
+
+  const displayName =
+    makeTeacherName(name);
+
+  if(!displayName){
+    return;
+  }
+
+  heroTeacherName.textContent =
+    displayName;
+
+  messageTeacherName.textContent =
+    displayName;
+
+  finalTeacherName.textContent =
+    displayName;
+
+  localStorage.setItem(
+    "teacherDayName",
+    displayName
+  );
+
+}
+
+
+/* Open website */
+
+function openWebsite(){
+
+  const enteredName =
+    cleanName(
+      teacherNameInput.value
+    );
+
+  if(!enteredName){
+
+    nameError.textContent =
+      "Please enter your teacher's name ❤️";
+
+    teacherNameInput.focus();
+
+    return;
+  }
+
+  nameError.textContent = "";
+
+  updateName(
+    enteredName
+  );
+
+  nameScreen.classList.add(
+    "hide"
+  );
+
+}
+
+
+/* Button */
+
+openLetterBtn.addEventListener(
+  "click",
+  openWebsite
+);
+
+
+/* Enter key */
+
+teacherNameInput.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key === "Enter"){
+      openWebsite();
+    }
+
+  }
+);
+
+
+/* =================================
+   CHANGE NAME
+================================= */
+
+changeNameBtn.addEventListener(
+  "click",
+  function(){
+
+    const current =
+      localStorage.getItem(
+        "teacherDayName"
+      );
+
+    if(current){
+
+      /*
+        Remove Ma'am before putting
+        the name back into input.
+      */
+
+      const editableName =
+        current.replace(
+          /\s+(ma'?am|mam)$/i,
+          ""
+        );
+
+      teacherNameInput.value =
+        editableName;
+
+    }
+
+    nameError.textContent = "";
+
+    nameScreen.classList.remove(
+      "hide"
+    );
+
+    setTimeout(
+      function(){
+
+        teacherNameInput.focus();
+
+        teacherNameInput.select();
+
+      },
+      300
+    );
+
+  }
+);
+
+
+/* =================================
+   LOAD SAVED NAME
+================================= */
+
+const savedName =
+  localStorage.getItem(
+    "teacherDayName"
+  );
+
+if(savedName){
+
+  teacherNameInput.value =
+    savedName.replace(
+      /\s+(ma'?am|mam)$/i,
+      ""
+    );
+
+  updateName(
+    savedName
+  );
+
+  nameScreen.classList.add(
+    "hide"
+  );
+
+}else{
+
+  setTimeout(
+    function(){
+
+      teacherNameInput.focus();
+
+    },
+    500
+  );
+
+}
+
+
+/* =================================
+   FALLING EMOJI RAIN
+================================= */
+
+const rainEmojis = [
+
+  "❤️",
+  "💖",
+  "💕",
+  "💗",
+  "💓",
+  "💞",
+
+  "🌸",
+  "🌷",
+  "🌹",
+  "🌺",
+  "🌼",
+  "🌻",
+
+  "✨",
+  "⭐",
+  "💫",
+  "🌟",
+
+  "💜",
+  "🩷"
+
+];
+
+
+function createLoveRain(){
+
+  const emoji =
+    document.createElement("div");
+
+  emoji.className =
+    "love-rain";
+
+  emoji.textContent =
+    rainEmojis[
+      Math.floor(
+        Math.random() *
+        rainEmojis.length
+      )
+    ];
+
+  emoji.style.left =
+    Math.random() * 100 + "vw";
+
+  emoji.style.fontSize =
+    14 + Math.random() * 18 + "px";
+
+  const duration =
+    5 + Math.random() * 7;
+
+  emoji.style.animationDuration =
+    duration + "s";
+
+  document.body.appendChild(
+    emoji
+  );
+
+  setTimeout(
+    function(){
+
+      if(emoji.parentNode){
+        emoji.remove();
+      }
+
+    },
+    (duration + 1) * 1000
+  );
+
+}
+
+
+setInterval(
+  createLoveRain,
+  350
+);
+
+
+/* =================================
+   SCROLL REVEAL
+================================= */
+
+const revealElements =
+  document.querySelectorAll(
+    ".reveal"
+  );
+
+
+if(
+  "IntersectionObserver" in window
+){
+
+  const observer =
+    new IntersectionObserver(
+      function(entries){
+
+        entries.forEach(
+          function(entry){
+
+            if(
+              entry.isIntersecting
+            ){
+
+              entry.target.classList.add(
+                "active"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold:.12
+      }
+    );
+
+
+  revealElements.forEach(
+    function(element){
+
+      observer.observe(
+        element
+      );
+
+    }
+  );
+
+}else{
+
+  revealElements.forEach(
+    function(element){
+
+      element.classList.add(
+        "active"
+      );
+
+    }
+  );
+
+}
+
+
+/* =================================
+   CLICK / TOUCH HEARTS
+================================= */
+
+const clickEmojis = [
+
+  "❤️",
+  "💖",
+  "💕",
+  "💗",
+  "🌸",
+  "🌷",
+  "✨",
+  "⭐",
+  "💫"
+
+];
+
+let lastTouchTime = 0;
+
+
+function createFloatingHeart(
+  x,
+  y
+){
+
+  const heart =
+    document.createElement("div");
+
+  heart.className =
+    "floating-heart";
+
+  heart.textContent =
+    clickEmojis[
+      Math.floor(
+        Math.random() *
+        clickEmojis.length
+      )
+    ];
+
+  heart.style.left =
+    x + "px";
+
+  heart.style.top =
+    y + "px";
+
+  document.body.appendChild(
+    heart
+  );
+
+  setTimeout(
+    function(){
+
+      if(heart.parentNode){
+        heart.remove();
+      }
+
+    },
+    2300
+  );
+
+}
+
+
+/* Desktop click */
+
+document.addEventListener(
+  "click",
+  function(event){
+
+    if(
+      Date.now() -
+      lastTouchTime <
+      500
+    ){
+      return;
+    }
+
+    createFloatingHeart(
+      event.clientX,
+      event.clientY
+    );
+
+  }
+);
+
+
+/* Mobile touch */
+
+document.addEventListener(
+  "touchstart",
+  function(event){
+
+    lastTouchTime =
+      Date.now();
+
+    const touch =
+      event.touches[0];
+
+    if(!touch){
+      return;
+    }
+
+    createFloatingHeart(
+      touch.clientX,
+      touch.clientY
+    );
+
+  },
+  {
+    passive:true
+  }
+);
+
+
+console.log(
+  "❤️ Happy Teacher's Day!"
+);
+
+console.log(
+  "Made with love by Pranesh | Vibe Verse Tech"
+);
+
+</script>
+
+</body>
+</html>
+```
